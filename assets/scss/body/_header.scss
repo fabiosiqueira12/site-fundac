@@ -1,0 +1,267 @@
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+
+    .header-top{
+        background: $white;
+        position: relative;
+        border-top: 2px solid $orange2;
+        border-bottom: 1px solid $gray2;
+        .list-social{
+            margin: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            list-style: none;
+            padding: 0px;
+            li{
+                &:first-child{
+                    border-left: 1px solid $gray2;
+                }
+                a{
+                    text-decoration: none !important;
+                    i{
+                        width: 38px;
+                        height: 38px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-right: 1px solid $gray2;
+                        color: $black2;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-main {
+        position: relative;
+        background: $white;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid transparent;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        .logo {
+            img {
+                width: 150px;
+            }
+        }
+
+        ul.navbar {
+            display: flex;
+            align-items: center;
+            padding: 0px;
+            list-style: none;
+            justify-content: flex-end;
+
+            li {
+                padding-left: 25px;
+                padding-right: 25px;
+                border-right: 1px solid $gray2;
+                &:last-child {
+                    border-right: 0px !important;
+                    padding-right: 0px;
+                }
+                &:first-child{
+                    padding-left: 0px;
+                }
+                a {
+                    display: block;
+                    position: relative;
+                    font-size: 1.1rem;
+                    letter-spacing: 1px;
+                    font-weight: 700;
+                    padding-top: 7px;
+                    padding-bottom: 7px;
+                    color: $black2;
+                    transition: all 0.3s ease;
+
+                    &:hover,&.active {
+                        color: $orange !important;
+                        &:before {
+                            width: 25px !important;
+                            opacity: 1;
+                        }
+                    }
+
+                    &:before {
+                        opacity: 0px;
+                        content: "";
+                        width: 0px;
+                        height: 2px;
+                        border-radius: 30px;
+                        background: $orange;
+                        position: absolute;
+                        z-index: 1;
+                        bottom: 0px;
+                        left: 0px;
+                        transition: all 0.3s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+menu {
+
+    @media screen and (max-width : 780px) {
+        width: 80% !important;
+
+        .btn-close {
+            margin-left: auto;
+            margin-right: 26px;
+            display: block;
+        }
+
+        .list-menu {
+            li {
+                a {
+                    padding-left: 26px !important;
+                    font-size: 15px !important;
+                }
+            }
+        }
+
+        .list-redes,
+        p {
+            left: 26px !important;
+        }
+    }
+
+    position: fixed;
+    top: 0px;
+    right: 0;
+    margin: 0px;
+    z-index: 10000000;
+    width: 40%;
+    height: 100%;
+    padding: 0px;
+    background: $orange;
+    padding-top: 30px;
+    padding-bottom: 120px;
+    opacity: 0;
+    text-align: center;
+    overflow-y: auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    transition: all .25s linear;
+
+    .list-menu {
+        margin: 0px;
+        padding: 0px;
+        margin-top: 15px;
+
+        li {
+            a {
+                text-decoration: none !important;
+
+                text-transform: uppercase;
+                display: block !important;
+                padding-left: 40px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                margin: 0px !important;
+                font-size: 18px;
+                letter-spacing: 2px;
+                font-weight: 600;
+                text-align: left;
+                color: $white;
+                position: relative;
+                transition: all 0.3s ease;
+
+                &:focus,
+                &:hover {
+                    background: $orange;
+                    color: $black2;
+                }
+            }
+        }
+    }
+
+    .btn-close {
+        background: transparent;
+        padding: 0px;
+        font-size: 35px;
+        color: $white;
+        margin-bottom: 10px;
+        border: 0px;
+        box-shadow: none !important;
+        cursor: pointer;
+    }
+
+    .list-redes {
+        display: flex;
+        position: absolute;
+        bottom: 40px;
+        margin-bottom: 0px;
+        padding: 0px;
+        left: 40px;
+        list-style: none;
+        z-index: 1;
+
+        li {
+            margin-right: 20px;
+
+            a {
+                font-size: 32px;
+                color: $white;
+            }
+
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+
+    p {
+        bottom: 15px;
+        color: $white;
+        font-size: 14px;
+        position: absolute;
+        left: 40px;
+    }
+}
+
+
+.menu-active {
+    overflow: hidden !important;
+
+    body {
+        overflow: hidden !important;
+    }
+}
+
+header,
+main {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    transition: all .25s linear;
+}
+
+/*
+   Com a classe menu-active na tag HTML
+*/
+.menu-active menu {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+}
