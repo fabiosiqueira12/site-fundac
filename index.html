@@ -117,7 +117,7 @@
                                 <a href="#">O Parque</a>
                             </li>
                             <li>
-                                <a href="#">Eventos</a>
+                                <a href="#">Calendário</a>
                             </li>
                             <li>
                                 <a href="#">Contato</a>
@@ -168,8 +168,80 @@
                 </div>
             </div>
         </section>
-        <section id="photos" style="overflow : hidden">
+        <section id="gallery" style="position : relative;overflow : hidden;">
+            <div class="my-slider">
+                <div>
+                    <a href="assets/img/feira/1.jpg" class="glightbox">
+                        <img style="max-width : 100%;" src="assets/img/feira/1.jpg" alt="Foto da feira">
+                    </a>
+                </div>
+                <div>
+                    <a href="assets/img/feira/2.jpg" class="glightbox">
+                        <img style="max-width : 100%;" src="assets/img/feira/2.jpg" alt="Foto da feira">
+                    </a>
+                </div>
+                <div>
+                    <a href="assets/img/feira/3.jpg" class="glightbox">
+                        <img style="max-width : 100%;" src="assets/img/feira/3.jpg" alt="Foto da feira">
+                    </a>
+                </div>
+                <div>
+                    <a href="assets/img/feira/4.jpg" class="glightbox">
+                        <img style="max-width : 100%;" src="assets/img/feira/4.jpg" alt="Foto da feira">
+                    </a>
+                </div>
+                <div>
+                    <a href="assets/img/feira/5.jpg" class="glightbox">
+                        <img style="max-width : 100%;" src="assets/img/feira/5.jpg" alt="Foto da feira">
+                    </a>
+                </div>
+                <div>
+                    <a href="assets/img/feira/6.jpg" class="glightbox">
+                        <img style="max-width : 100%;" src="assets/img/feira/6.jpg" alt="Foto da feira">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="a-feira" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title-with-border text-center">
+                            <h3>O Parque</h3>
+                            <img data-src="assets/img/border.png" class="lazy" alt="Borda">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6 col-12">
+                        <ul class="list-motivos">
+                            <li>
+                                <i class="fa fa-store-alt"></i>
+                                <h5>100 Lojas</h5>
+                            </li>
+                            <li>
+                                <i class="fa fa-bath"></i>
+                                <h5>Banheiros<br>Climatizados</h5>
+                            </li>
+                            <li>
+                                <i class="fab fa-accessible-icon"></i>
+                                <h5>Rampas de<br>acesso</h5>
+                            </li>
+                            <li>
+                                <i class="fa fa-lock"></i>
+                                <h5>Segurança</h5>
+                            </li>
+                            <li>
+                                <i class="fa fa-map-marker-alt"></i>
+                                <h5>Boa localização</h5>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-12">
 
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
@@ -188,12 +260,20 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" rel="stylesheet">
     <!-- END FONTS !-->
 
+    <!-- CSS PLUGINS !-->
+    <link rel="stylesheet" href="assets/css/tiny-slider.css">
+    <link rel="stylesheet" href="assets/css/glightbox.min.css">
+    <!-- END CSS PLUGINS !-->
+
     <!-- SCRIPS !-->
     <script src="assets/js/sweetalert2.all.min.js"></script>
     <script src="assets/js/axios.min.js"></script>
     <script src="assets/js/typed.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
+
         var strings = [];
         strings.push('A melhor feira<br> da região!');
         strings.push('Os melhores preços<br>no melhor lugar!');
@@ -205,6 +285,46 @@
             backDelay: 4000,
             typeSpeed: 40,
             loop: true
+        });
+
+        var slider = tns({
+            container: '.my-slider',
+            items: 3,
+            loop: false,
+            dots: false,
+            mouseDrag: true,
+            swipeAngle: false,
+            controlsPosition: 'bottom',
+            controlsText: [
+                "<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"
+            ],
+            responsive: {
+                350: {
+                    items: 1
+                },
+                650: {
+                    items: 2
+                },
+                800: {
+                    items: 3
+                }
+            },
+            nav: false,
+            mouseDrag: true,
+            slideBy: 'page'
+        });
+
+        const lightbox = GLightbox({
+            touchNavigation: true,
+            loopAtEnd: true,
+            autoplayVideos: true,
+            onOpen: () => {
+                
+            },
+            beforeSlideLoad: (slide, data) => {
+                // Need to execute a script in the slide?
+                // You can do that here...
+            }
         });
     </script>
     <!-- END SCRIPTS !-->
