@@ -212,7 +212,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-2">
+                <div class="row mt-3">
                     <div class="col-md-6 col-12">
                         <ul class="list-motivos">
                             <li>
@@ -238,17 +238,128 @@
                         </ul>
                     </div>
                     <div class="col-md-6 col-12">
-
+                        <div class="mapa">
+                            <iframe height="350" frameborder="0" style="width: 100%;border:0;margin-bottom: -25px;"
+                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyANgAmr0NYico5FpX16SQuE2_RXfy0daqA&amp;q=FEIRA+DA+SULANCA+FUNDAC, Caruaru-PE"
+                                allowfullscreen="">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="calendario" class="pt-section pb-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title-with-border text-center">
+                            <h3>Calendário</h3>
+                            <img data-src="assets/img/border.png" class="lazy" alt="Borda">
+                            <p>Acompanhe abaixo os dias de feira lembrando que começa sempre às 4 horas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2 justify-content-center">
+                    <div class="col-md-5 col-12">
+                        <div id="caleandar"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contato">
+            <img data-src="assets/img/back.jpg" alt="Background" class="lazy back">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title-with-border text-center">
+                            <h3>Contato</h3>
+                            <img data-src="assets/img/border.png" class="lazy" alt="Borda">
+                            <p>Ficou alguma dúvida? Entre em contato conosco.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center flex-wrap">
+                    <div class="col-md-8 col-12">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <input type="text" name="nome" class="form-control" required placeholder="Nome">
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <input type="email" required name="email" class="form-control" required
+                                        placeholder="E-mail">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-12 form-group">
+                                    <input type="text" class="form-control" name="telefone" required
+                                        placeholder="Telefone  ">
+                                </div>
+                                <div class="col-md-6 col-12 form-group">
+                                    <input type="text" class="form-control" name="assunto" placeholder="Assunto"
+                                        class="form-control" required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="mensagem" class="form-control" placeholder="Mensagem"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text-right">
+                                    <button type="button" class="btn">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <p>© FUNDAC 2019. Todos os direitos reservados;</p>
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <h4>Diretores</h4>
+                        <ul>
+                            <li>Nome do Diretor 1</li>
+                            <li>Nome do Diretor 2</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <h4>Escritório</h4>
+                        <p>
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span>Endereço vem aqui, Centro, <br>Caruaru-PE</span>
+                        </p>
+                        <p>
+                            <i class="fa fa-phone"></i>
+                            <span>(81) 3333-3333</span>
+                        </p>
+                        <p>
+                            <i class="fa fa-envelope"></i>
+                            <span>contato@fundac.com</span>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <h4>Redes Sociais</h4>
+                        <a href="https://www.facebook.com/feiradasulancafundac/" class="link" target="_blank">
+                            <img src="assets/img/social_share/facebook.svg" alt="Facebook">
+                            <span>@feiradasulancafundac</span>
+                        </a>
+                        <a href="https://www.instagram.com/feiradasulancafundac/" class="link" target="_blank">
+                            <img src="assets/img/social_share/instagram.svg" alt="Instagram">
+                            <span>@feiradasulancafundac</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>© FUNDAC 2019. Todos os direitos reservados;</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -263,6 +374,7 @@
     <!-- CSS PLUGINS !-->
     <link rel="stylesheet" href="assets/css/tiny-slider.css">
     <link rel="stylesheet" href="assets/css/glightbox.min.css">
+    <link rel="stylesheet" href="assets/css/theme2.css">
     <!-- END CSS PLUGINS !-->
 
     <!-- SCRIPS !-->
@@ -271,9 +383,9 @@
     <script src="assets/js/typed.js"></script>
     <script src="assets/js/tiny-slider.js"></script>
     <script src="assets/js/glightbox.min.js"></script>
+    <script src="assets/js/caleandar.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-
         var strings = [];
         strings.push('A melhor feira<br> da região!');
         strings.push('Os melhores preços<br>no melhor lugar!');
@@ -319,13 +431,49 @@
             loopAtEnd: true,
             autoplayVideos: true,
             onOpen: () => {
-                
+
             },
             beforeSlideLoad: (slide, data) => {
                 // Need to execute a script in the slide?
                 // You can do that here...
             }
         });
+
+        var events = [{
+                'Date': new Date(2019, 9, 8),
+                'Title': 'Dia de feira!',
+                'Link' : 'javascript:void(0)'
+            },
+            {
+                'Date': new Date(2019, 9, 18),
+                'Title': 'Dia de feira!',
+                'Link' : 'javascript:void(0)'
+            },
+            {
+                'Date': new Date(2019, 9, 27),
+                'Title': 'Dia de feira!',
+                'Link' : 'javascript:void(0)'
+            },
+        ];
+
+        var settings = {
+            Color: '',
+            LinkColor: '#333',
+            NavShow: true,
+            NavVertical: false,
+            NavLocation: '',
+            DateTimeShow: true,
+            DateTimeFormat: 'mmm, yyyy',
+            DatetimeLocation: '',
+            EventClick: '',
+            EventTargetWholeDay: false,
+            DisabledDays: [],
+            ModelChange: null
+        };
+
+        var element = document.getElementById('caleandar');
+        caleandar(element, events, settings);
+
     </script>
     <!-- END SCRIPTS !-->
 
