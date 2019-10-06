@@ -57,8 +57,8 @@ function doScrolling(element, duration) {
         // Apply the easing.
         // It can cause bad-looking slow frames in browser performance tool, so be careful.
         percent = easing(percent)
-
-        window.scrollTo(0, startingY + diff * percent)
+        scrollTotal = startingY + diff * percent
+        window.scrollTo(0, scrollTotal - 80)
 
         // Proceed with animation as long as we wanted it to.
         if (time < duration) {

@@ -1,11 +1,11 @@
+$borderRadius : 6px;
+$boxShadow : 0 1px 3px rgba(0, 0, 0, .12),
+0 1px 2px rgba(0, 0, 0, .24);
+
 @import "variables/colors";
 @import "body/fonts";
 @import "body/header";
 @import "body/footer";
-
-$borderRadius : 6px;
-$boxShadow : 0 1px 3px rgba(0, 0, 0, .12),
-0 1px 2px rgba(0, 0, 0, .24);
 
 #loader {
     position: fixed;
@@ -99,6 +99,38 @@ section#banner {
     width: 100%;
     height: 100vh;
 
+    @media screen and (max-width : 800px){
+        #typed{
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+            font-size: 2.2rem !important;
+            text-align: center !important;
+            line-height: 2.7rem !important; 
+            br{
+                display: none !important;
+            }
+        }
+        .typed-cursor{
+            font-size: 2.2rem !important;
+        }
+    }
+
+    @media screen and (min-width : 801px) and (max-width : 1199px){
+        #typed{
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+            font-size: 2.2rem !important;
+            text-align: center !important;
+            line-height: 2.7rem !important; 
+            br{
+                display: none !important;
+            }
+        }
+        .typed-cursor{
+            font-size: 2.2rem !important;
+        }
+    }
+
     .container {
         position: relative;
         z-index: 1;
@@ -181,6 +213,54 @@ section#banner {
 
 .side {
     padding-right: 40px;
+}
+
+@media screen and (max-width : 650px){
+    .side{
+        padding-right: 0px !important;
+        margin-bottom: 25px;
+    }
+    .title-with-border{
+        text-align: center !important;
+        h3{
+            font-size: 1.5rem !important;
+        }
+        img{
+            max-width: 140px !important;
+        }
+    }
+    .list-motivos{
+        li{
+            width: 50% !important;
+            text-align : center;
+            justify-content: center;
+            display: inline-flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+    }
+    section#contato{
+        form{
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+    }
+}
+
+@media screen and (min-width : 651px) and (max-width : 800px){
+    .side{
+        padding-right: 0px !important;
+        margin-bottom: 25px;
+    }
+    .title-with-border{
+        text-align: center !important;
+        h3{
+            font-size: 1.5rem !important;
+        }
+        img{
+            max-width: 140px !important;
+        }
+    }
 }
 
 .title-with-border {
@@ -302,7 +382,7 @@ section#gallery {
     align-items: center;
     flex-wrap: wrap;
     margin-left: -20px;
-    margin-right: 20px;
+    margin-right: -20px;
     list-style: none;
     padding: 0px;
 

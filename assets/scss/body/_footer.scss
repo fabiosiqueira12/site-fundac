@@ -4,6 +4,12 @@ footer {
         padding-bottom: 40px;
         background: $white;
 
+        @media screen and (max-width : 800px){
+            .link{
+                font-size: 14px !important;
+            }
+        }
+
         ul{
             padding-left: 16px;
             li{

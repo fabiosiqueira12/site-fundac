@@ -96,16 +96,17 @@
     </div>
     <!-- END LOADER !-->
 
+    <!-- HEADER !-->
     <header id="header-principal">
         <div class="header-main">
             <div class="container">
                 <div class="row align-items-center flex-wrap">
-                    <div class="col-md-3 col-12">
-                        <a href="#" class="logo">
+                    <div class="col-md-3 col-6">
+                        <a href="index.html" class="logo">
                             <img data-src="assets/img/logo.png" class="lazy" alt="Feira da Sulanca | FUNDAC">
                         </a>
                     </div>
-                    <div class="col-md-9 col-12">
+                    <div class="col-md-9 col-6">
                         <ul class="navbar">
                             <li>
                                 <a class="active" href="index.html">Home</a>
@@ -114,20 +115,64 @@
                                 <a href="javascript:void(0)" onclick="doScrolling('#about',1000)">A feira</a>
                             </li>
                             <li>
-                                <a href="#">O Parque</a>
+                                <a href="javascript:void(0)" onclick="doScrolling('#a-feira',1000)">O Parque</a>
                             </li>
                             <li>
-                                <a href="#">Calendário</a>
+                                <a href="javascript:void(0)" onclick="doScrolling('#calendario',1000)">Calendário</a>
                             </li>
                             <li>
-                                <a href="#">Contato</a>
+                                <a href="javascript:void(0)" onclick="doScrolling('#contato',1000)">Contato</a>
                             </li>
                         </ul>
+                        <button type="button" onclick="toggleMenu();" class="btn show-mobile">
+                            <i class="fa fa-bars"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    <!-- END HEADER !-->
+
+    <!-- MENU MOBILE !-->
+    <menu>
+        <button onclick="closeMenu()" class="btn btn-close" type="button">
+            <i class="fa fa-times"></i>
+        </button>
+        <ul class="list-menu">
+            <li>
+                <a class="active" href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="doScrolling('#about',1000)">A feira</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="doScrolling('#a-feira',1000)">O Parque</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="doScrolling('#calendario',1000)">Calendário</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="doScrolling('#contato',1000)">Contato</a>
+            </li>
+        </ul>
+        <ul class="list-redes" style="bottom: 75px;">
+            <li>
+                <a href="https://www.facebook.com/encontreofabricante/" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/appencontreofabricante" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+        <p style="text-align : left">© FUNDAC. Todos os direitos reservados.</p>
+    </menu>
+    <!-- END MOBILE !-->
+
+    <!-- MAIN !-->
     <main>
         <section id="banner" class="d-flex align-items-center justify-content-center"
             style="background-image: url('assets/img/back.jpg')">
@@ -147,7 +192,7 @@
         <section id="about" class="pt-section pb-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-12">
+                    <div class="col-lg-6 col-md-12 col-12">
                         <div class="side">
                             <div class="title-with-border">
                                 <h3>A Feira</h3>
@@ -162,7 +207,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-12">
+                    <div class="col-lg-6 col-md-12 col-12">
                         <video width="100%" src="assets/videos/principal.mp4" controls></video>
                     </div>
                 </div>
@@ -213,7 +258,7 @@
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-6 col-12">
+                    <div class="col-lg-6 col-md-12 col-12">
                         <ul class="list-motivos">
                             <li>
                                 <i class="fa fa-store-alt"></i>
@@ -237,7 +282,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-6 col-12">
+                    <div class="col-lg-6 col-md-12 col-12">
                         <div class="mapa">
                             <iframe height="350" frameborder="0" style="width: 100%;border:0;margin-bottom: -25px;"
                                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyANgAmr0NYico5FpX16SQuE2_RXfy0daqA&amp;q=FEIRA+DA+SULANCA+FUNDAC, Caruaru-PE"
@@ -260,7 +305,7 @@
                     </div>
                 </div>
                 <div class="row mt-2 justify-content-center">
-                    <div class="col-md-5 col-12">
+                    <div class="col-lg-5 col-md-6 col-12">
                         <div id="caleandar"></div>
                     </div>
                 </div>
@@ -279,7 +324,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-center align-items-center flex-wrap">
-                    <div class="col-md-8 col-12">
+                    <div class="col-lg-8 col-md-10 col-12">
                         <form action="">
                             <div class="row">
                                 <div class="col-md-6 col-12">
@@ -314,6 +359,9 @@
             </div>
         </section>
     </main>
+    <!-- END MAIN !-->
+
+    <!-- FOOTER !-->
     <footer>
         <div class="footer-main">
             <div class="container">
@@ -343,11 +391,11 @@
                     <div class="col-md-4 col-12">
                         <h4>Redes Sociais</h4>
                         <a href="https://www.facebook.com/feiradasulancafundac/" class="link" target="_blank">
-                            <img src="assets/img/social_share/facebook.svg" alt="Facebook">
+                            <img class="lazy" data-src="assets/img/social_share/facebook.svg" alt="Facebook">
                             <span>@feiradasulancafundac</span>
                         </a>
                         <a href="https://www.instagram.com/feiradasulancafundac/" class="link" target="_blank">
-                            <img src="assets/img/social_share/instagram.svg" alt="Instagram">
+                            <img class="lazy" data-src="assets/img/social_share/instagram.svg" alt="Instagram">
                             <span>@feiradasulancafundac</span>
                         </a>
                     </div>
@@ -364,6 +412,7 @@
             </div>
         </div>
     </footer>
+    <!-- END FOOTER !-->
 
     <!-- FONTS !-->
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900&display=swap" rel="stylesheet">
@@ -388,8 +437,8 @@
     <script>
         var strings = [];
         strings.push('A melhor feira<br> da região!');
-        strings.push('Os melhores preços<br>no melhor lugar!');
-        strings.push('Começando sempre<br>às 4 horas da manhã!');
+        strings.push('Os melhores preços<br> no melhor lugar!');
+        strings.push('Começando sempre<br> às 4 horas da manhã!');
         var typed = new Typed('#typed', {
             smartBackspace: false,
             strings: strings,
@@ -442,17 +491,17 @@
         var events = [{
                 'Date': new Date(2019, 9, 8),
                 'Title': 'Dia de feira!',
-                'Link' : 'javascript:void(0)'
+                'Link': 'javascript:void(0)'
             },
             {
                 'Date': new Date(2019, 9, 18),
                 'Title': 'Dia de feira!',
-                'Link' : 'javascript:void(0)'
+                'Link': 'javascript:void(0)'
             },
             {
                 'Date': new Date(2019, 9, 27),
                 'Title': 'Dia de feira!',
-                'Link' : 'javascript:void(0)'
+                'Link': 'javascript:void(0)'
             },
         ];
 
@@ -473,7 +522,6 @@
 
         var element = document.getElementById('caleandar');
         caleandar(element, events, settings);
-
     </script>
     <!-- END SCRIPTS !-->
 
