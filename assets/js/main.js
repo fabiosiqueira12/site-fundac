@@ -47,6 +47,8 @@ function doScrolling(element, duration) {
 
     if (!diff) return
 
+    closeMenu();
+
     // Bootstrap our animation - it will get called right before next frame shall be rendered.
     window.requestAnimationFrame(function step(timestamp) {
         if (!start) start = timestamp

@@ -418,10 +418,31 @@ section#gallery {
     }
 }
 
-section#contato {
+section#regulamento{
+    height: 270px;
+    padding-top: 40px !important;
+}
+
+section#contato,section#regulamento {
     position: relative;
     padding-top: 70px;
     padding-bottom: 70px;
+
+    .btn{
+        padding: 10px;
+        padding-left: 22px;
+        padding-right: 22px;
+        background: $white;
+        box-shadow: $boxShadow;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        color: $orange;
+        font-weight: bold;
+        transition: all 0.2s ease;
+        &:hover{
+            font-size: 1rem;
+        }
+    }
     
     p{
         text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
@@ -566,6 +587,7 @@ section#contato {
 
 .cld-day.today .cld-number{
     background: $orange !important;
+    color: #fff !important;
 }
 
 .cld-number.eventday{

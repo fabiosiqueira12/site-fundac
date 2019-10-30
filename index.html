@@ -19,11 +19,11 @@
     <meta property="og:type" content="website" />
 
     <!-- FAVICON !-->
-    <link rel="icon" href="{{base_url()}}/assets/img/favicon.ico" />
+    <link rel="icon" href="assets/img/favicon.ico" />
 
     <!-- STYLE !-->
     <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css?v=1.1.0">
 
     <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -118,6 +118,9 @@
                                 <a href="javascript:void(0)" onclick="doScrolling('#a-feira',1000)">O Parque</a>
                             </li>
                             <li>
+                                <a href="javascript:void(0)" onclick="doScrolling('#regulamento',1000)">Regulamento</a>
+                            </li>
+                            <li>
                                 <a href="javascript:void(0)" onclick="doScrolling('#calendario',1000)">Calendário</a>
                             </li>
                             <li>
@@ -148,6 +151,9 @@
             </li>
             <li>
                 <a href="javascript:void(0)" onclick="doScrolling('#a-feira',1000)">O Parque</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="doScrolling('#regulamento',1000)">Regulamento</a>
             </li>
             <li>
                 <a href="javascript:void(0)" onclick="doScrolling('#calendario',1000)">Calendário</a>
@@ -245,6 +251,31 @@
                         <img style="max-width : 100%;" src="assets/img/feira/6.jpg" alt="Foto da feira">
                     </a>
                 </div>
+                <div>
+                    <a href="assets/img/feira/7.jpg" class="glightbox">
+                        <img style="max-width : 100%;" src="assets/img/feira/7.jpg" alt="Foto da feira">
+                    </a>
+                </div>
+                <div>
+                    <a href="assets/img/feira/8.jpg" class="glightbox">
+                        <img style="max-width : 100%;" src="assets/img/feira/8.jpg" alt="Foto da feira">
+                    </a>
+                </div>
+                <div>
+                    <a href="assets/img/feira/9.jpg" class="glightbox">
+                        <img style="max-width : 100%;" src="assets/img/feira/9.jpg" alt="Foto da feira">
+                    </a>
+                </div>
+                <div>
+                    <a href="assets/img/feira/10.jpg" class="glightbox">
+                        <img style="max-width : 100%;" src="assets/img/feira/10.jpg" alt="Foto da feira">
+                    </a>
+                </div>
+                <div>
+                    <a href="assets/img/feira/11.jpg" class="glightbox">
+                        <img style="max-width : 100%;" src="assets/img/feira/11.jpg" alt="Foto da feira">
+                    </a>
+                </div>
             </div>
         </section>
         <section id="a-feira" class="bg-white">
@@ -257,12 +288,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-3">
+                <div class="row  mt-3">
                     <div class="col-lg-6 col-md-12 col-12">
                         <ul class="list-motivos">
                             <li>
                                 <i class="fa fa-store-alt"></i>
-                                <h5>100 Lojas</h5>
+                                <h5>Mais de <br>100 Lojas</h5>
                             </li>
                             <li>
                                 <i class="fa fa-bath"></i>
@@ -280,6 +311,10 @@
                                 <i class="fa fa-map-marker-alt"></i>
                                 <h5>Boa localização</h5>
                             </li>
+                            <li>
+                                <i class="fas fa-utensils"></i>
+                                <h5>Praça de Alimentação</h5>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-lg-6 col-md-12 col-12">
@@ -289,6 +324,26 @@
                                 allowfullscreen="">
                             </iframe>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="regulamento">
+            <img data-src="assets/img/back-feira.jpg" alt="Background" class="lazy back">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title-with-border text-center">
+                            <h3>Regulamento</h3>
+                            <img data-src="assets/img/border.png" class="lazy" alt="Borda">
+                            <p>Se você é feirante acesse o botão abaixo<br> e fique por dentro do regulamento da FUNDAC!</p>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center mt-2">
+                        <a href="assets/files/regulamento.pdf" target="_blank" class="btn">
+                            <i class="ti-file"></i>
+                            Acessar!
+                        </a>
                     </div>
                 </div>
             </div>
@@ -487,21 +542,103 @@
                 // You can do that here...
             }
         });
-
-        var events = [{
-                'Date': new Date(2019, 9, 8),
-                'Title': 'Dia de feira!',
-                'Link': 'javascript:void(0)'
+        var titleDefault = 'Dia de Feira!';
+        var link = 'javascript:void(0)';
+        var events = [
+            {
+                'Date': new Date(2019, 9, 7),
+                'Title': titleDefault,
+                'Link': link
             },
             {
-                'Date': new Date(2019, 9, 18),
-                'Title': 'Dia de feira!',
-                'Link': 'javascript:void(0)'
+                'Date': new Date(2019, 9, 14),
+                'Title': titleDefault,
+                'Link': link
             },
             {
-                'Date': new Date(2019, 9, 27),
-                'Title': 'Dia de feira!',
-                'Link': 'javascript:void(0)'
+                'Date': new Date(2019, 9, 21),
+                'Title': titleDefault,
+                'Link': link
+            },
+            {
+                'Date': new Date(2019, 9, 28),
+                'Title': titleDefault,
+                'Link': link
+            },
+            {
+                'Date': new Date(2019, 10, 4),
+                'Title': titleDefault,
+                'Link': link
+            }, 
+            {
+                'Date': new Date(2019, 10, 11),
+                'Title': titleDefault,
+                'Link': link
+            },
+            {
+                'Date': new Date(2019, 10, 17),
+                'Title': titleDefault,
+                'Link': link
+            },
+            {
+                'Date': new Date(2019, 10, 18),
+                'Title': titleDefault,
+                'Link': link
+            },
+            {
+                'Date': new Date(2019, 10, 24),
+                'Title': titleDefault,
+                'Link': link
+            },
+            {
+                'Date': new Date(2019, 10, 25),
+                'Title': titleDefault,
+                'Link': link
+            },
+            {
+                'Date': new Date(2019, 11, 1),
+                'Title': titleDefault,
+                'Link': link
+            },
+            {
+                'Date': new Date(2019, 11, 2),
+                'Title': titleDefault,
+                'Link': link
+            },
+            {
+                'Date': new Date(2019, 11, 8),
+                'Title': titleDefault,
+                'Link': link
+            },
+            {
+                'Date': new Date(2019, 11, 9),
+                'Title': titleDefault,
+                'Link': link
+            },
+            {
+                'Date': new Date(2019, 11, 15),
+                'Title': titleDefault,
+                'Link': link
+            },
+            {
+                'Date': new Date(2019, 11, 16),
+                'Title': titleDefault,
+                'Link': link
+            },
+            {
+                'Date': new Date(2019, 11, 22),
+                'Title': titleDefault,
+                'Link': link
+            },
+            {
+                'Date': new Date(2019, 11, 23),
+                'Title': titleDefault,
+                'Link': link
+            },
+            {
+                'Date': new Date(2019, 11, 30),
+                'Title': titleDefault,
+                'Link': link
             },
         ];
 
